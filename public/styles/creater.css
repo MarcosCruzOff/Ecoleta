@@ -1,0 +1,205 @@
+/*Configurando a Div page-home*/
+/*Background imagem*/
+#page-create{
+    width: 90%;
+    max-width: 1480px;    
+    margin: 0 auto;
+    
+    border: 1px solid transparent;  
+}
+
+/*Cabeçalho do site*/
+#page-create header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+/* Personalizando cores e texto 
+    do botão "Voltar para home" */
+#page-create header a{
+    display: flex;
+    color: var(--title-color);
+    font-weight: bold;
+    align-items: center;        
+}
+
+/* Personaliza o icone 
+    do botão "Voltar para home" */
+#page-create header a span{
+    background-image: url('../icons/arrow-left.svg');
+    height: 25px;
+    width: 20px;
+    display: flex;
+    margin-right: 5px;
+}
+
+/* Estiliza o formulário, 
+    posição, cor e tamanho */
+#page-create form {
+    background-color: white;
+    padding: 64px 10px;
+    margin: 50px auto;
+    max-width: 1250px;
+    text-align: center;
+    
+}
+
+/* Estiliza o texto do formulário
+    "Cadastrar um ponto de coleta" */
+#page-create form h1 {
+    font-size: 36px;
+}
+
+/* Estiliza o tamanho dos inputs
+    e aparência */
+#page-create input, select {
+    background-color: var(--background-body);
+    padding: 16px 24px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Estiliza a posição do fieldset para 
+    que fique um ao lado do outro */
+.one-page {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estipula um tamanho para o 
+    fieldset Dados da entidade e o 
+    personaliza */
+#page-create fieldset.campo1{
+    margin-top: 64px;
+    width: 700px;
+    border: 1px solid black;
+    text-align: left;
+}
+
+/* Estiliza o espaçamento do fieldset */
+#page-create fieldset.campo2 {
+    margin-top: 64px;    
+    /* justify-content: center;
+    align-items: center; */
+    border: 1px solid black;
+   
+}
+
+/* Estiliza o espaçamento do legend 
+    e centralizando o texto de ambos fieldset */
+#page-create legend {
+    margin-bottom: 40px;  
+    display: flex;
+    text-align: center;
+}
+
+/* Estiliza a direção dos inputs,
+     preenche o espaço todo */
+.field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 24px;
+}
+
+/* Faz com que os campos "imagem da entidade
+    Número/Complemento Cidade fiquei ao lado 
+    dos outros inputs */
+.field-group {
+    display: flex;
+}
+
+/* Estiliza o espaçamento do lado esquedo
+    dos campos Endereço e Numero
+    Estado e Cidade */
+.field-group .field + .field{
+    margin-left: 24px;
+}
+
+/* Estiliza o espaçamento do e o tamanho
+    da fontes dos inputs */
+#page-create label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* ========== FIELDSET ITENS DE COLETA ==========*/
+
+/* Estilização o comportamento em Grid
+    "dos itens de coleta" */
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Estilização da tag Li do grid */
+.items-grid li {
+    background-color: var(--background-body);
+    border: 2px solid var(--background-body);
+    height: 165px;
+    width: 150px;
+    padding: 32px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+/* Estilização das imagens dos
+     "itens de coletas" */
+.items-grid li span {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: var(--title-color);
+    margin-top: 12px;
+}
+
+/* Estilização da classe escondida 
+    dos "itens de coleta" */
+li.selected {
+    background-color: var(--background-item);
+    border: 2px solid var(--primary-color);
+}
+
+/* Previne que haja capturas indevidas
+    da imagem ou span em "itens de coleta" */
+.items-grid li img,
+.items-grid li span {
+    pointer-events: none;
+}
+
+/* Estiliza as propriedades do botão Cadastrar*/
+#page-create form button {
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 40px;
+
+    transition: 400ms;
+}
+
+/* Aplica o efeito de hover no botão Cadastrar */
+#page-create form button:hover {
+    background-color: var(--transition-primary-color);
+}
+
+
+
+/* retira o botão duplicado "voltar para home" */
+#page-create form .inForm {
+    display: none;
+}

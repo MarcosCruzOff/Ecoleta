@@ -1,0 +1,95 @@
+/*Configurando a Div page-home*/
+/*Background imagem*/
+#page-search{
+    width: 90%;
+    max-width: 1480px;    
+    margin: 0 auto; 
+    border: 1px solid transparent;
+    
+}
+/*Cabeçalho do site*/
+#page-search header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#page-search header a{
+    display: flex;
+    color: var(--title-color);
+    font-weight: bold;
+    align-items: center;        
+}
+
+#page-search header a span{
+    background-image: url('../icons/arrow-left.svg');
+    height: 25px;
+    width: 20px;
+    display: flex;
+    margin-right: 5px;
+}
+
+main {
+    margin-top: 48px;    
+}
+
+main img {
+    height: auto;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+main h4 {
+    font-weight: 100;
+    margin-bottom: 32px;
+}
+
+main .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.card h1 {
+    margin-top: 32px;
+    font-size: 36px;
+    line-height: 41px;
+    color: var(--title-color);
+}
+
+.card h3 {
+    margin: 24px 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    color: var(--primary-color);
+}
+
+.card p {
+   font-size: 16px;
+   line-height: 26px;
+   
+   color: #6c6c80;
+}
+
+/* retira o botão duplicado "voltar para home" */
+#page-search main .inSearch {
+    display: none;
+}
+body{
+    background-color: white;
+}
+body::after {
+    content: "";
+    position: absolute;
+    background: #f0f0f5;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 16rem;
+    z-index: -1;
+}
+
+

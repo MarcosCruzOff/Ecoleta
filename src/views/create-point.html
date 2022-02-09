@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-create" %}
+
+<!--Css-->
+{% block styles %}
+  <link rel="stylesheet" href="/styles/creater.css">
+  <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
+
+{% block title %}
+  <title>Ecoleta - Cadastro</title>
+{% endblock title %}
+
+{% block content %}
+    <!--Header menu-->
+  {% include "partials/page-header.html" %}
+
+  <!--FORMULÁRIO-->
+  <form action="/savepoint" method="POST">
+    <h1>Cadastrar um ponto de coleta</h1>
+
+    <div class="one-page">
+
+      <!--1° CAMPO DO FORMULÁRIO CADASTRO DO ENDEREÇO-->
+      <fieldset class="campo1">
+
+        <legend>
+          <h2>Dados da entidade</h2>
+        </legend>
+
+        <!--CAMPO NOME E IMAGEM DO FORMULÁRIO-->
+        <div class="field-group">
+
+          <div class="field">
+            <label for="name">Nome da entidade</label>
+            <input type="text" name="name" id="" required>
+          </div>
+
+          <div class="field">
+            <label for="name">imagem da entidade</label>
+            <input type="text" name="image" id="" required placeholder="http://">
+          </div>
+          
+        </div>
+
+        <!--GRUPO 01 DO FORMULÁRIO-->
+        <div class="field-group">
+          <div class="field">
+
+            <!--CAMPO ENDEREÇO-->
+            <label for="address">Endereço</label>
+            <input type="text" name="address" required>
+
+          </div>
+          
+          <div class="field">
+
+            <!--CAMPO NÚMERO OU COMPLEMENTO-->
+            <label for="address2">Número/Complemento</label>
+            <input type="text" name="address2" required>
+
+          </div>
+
+        </div>
+
+        <!--GRUPO 02 DO FORMULÁRIO-->
+        <div class="field-group">
+
+          <!--CAMPO ESTADO-->
+          <div class="field">
+            
+            <label for="state">Estado</label>
+            <select name="uf" id="">
+              <option value="">Selecione o Estado</option>
+            </select>
+            <input type="hidden" name="state">
+
+          </div>
+          
+          <!--CAMPO CIDADE-->
+          <div class="field">
+            
+            <label for="city">Cidade</label>
+            <select name="city" id="" disabled>
+              <option value="">Selecione a cidade</option>
+            </select>
+
+          </div>
+
+        </div>      
+
+      </fieldset>
+
+      <!--2° CAMPO DO FORMULÁRIO CADASTRO DOS ITENS-->
+      <fieldset class="campo2">
+
+        <legend>
+          <h2>Itens de coletas</h2>          
+        </legend>
+
+        <div class="items-grid">
+            <li data-id="Lâmpadas" >
+              <img src="/icons/lampadas.svg" alt="Lâmpadas">
+              <span>Lâmpadas</span>
+            </li>
+
+            <li data-id="Pilhas e Baterias">
+              <img src="/icons/baterias.svg" alt="Pilhas e Baterias">
+              <span>Pilhas e Baterias</span>
+            </li>
+
+            <li data-id="Papéis e Papelão">
+              <img src="/icons/papeis-papelao.svg" alt="Papéis e Papelão">
+              <span>Papéis e Papelão</span>
+            </li>
+
+            <li data-id="Resíduos Eletrônicos">
+              <img src="/icons/eletronicos.svg" alt="Resíduos Eletrônicos">
+              <span>Resíduos Eletrônicos</span>
+            </li>
+
+            <li data-id="Resíduos Orgânicos">
+              <img src="/icons/organicos.svg" alt="Resíduos Orgânicos">
+              <span>Resíduos Orgânicos</span>
+            </li>
+
+            <li data-id="Óleo de Cozinha">
+              <img src="/icons/oleo.svg" alt="Óleo de Cozinha">
+              <span>Óleo de Cozinha</span>
+            </li>
+        </div>
+
+        <!--Salva e armazena os itens selecionados a cima-->
+        <input type="hidden" name="items">
+
+      </fieldset>
+
+    </div>
+
+    <button type="submit">Cadastrar</button>
+
+    <a href="/" class="inForm">
+      <span></span>
+      Voltar para home
+    </a>
+
+  </form>  
+
+{% endblock content %}
+
+{% block modal %}
+
+  {% if saved %}
+    {%include "partials/point-created.html"%}
+  {% endif %}
+  
+{% endblock modal %}
+
+{% block script %}
+  <script src="javascript/create.js"></script>
+{% endblock script %}

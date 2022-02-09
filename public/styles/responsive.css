@@ -1,0 +1,600 @@
+@media (min-width:320px) {
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+
+   /* ======================== Página Index ====================== */
+   /* Remove o Backgorund */
+   #page-home  {
+       background: none;
+   }
+
+   /* Remove o botão do header */
+   #page-home header .buttonHidden{
+       display: none;           
+   }
+
+   /* Centraliza a logo na tela */
+   #page-home header{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-top: 35px;       
+   }
+
+   /* Espaçamento entre o texto e primeiro botão */
+   #page-home main p{        
+       padding-bottom: 50px;
+   }
+
+   /* Centraliza o conteudo da tag main */
+   #page-home main{
+        max-width: 400px;
+        max-height: 800px;
+        text-align: center;   
+        margin: 0 auto;        
+   }
+
+   /* Tamanho do Título responsivo */
+   #page-home main h1 {
+       font-size: 6vh;
+   }
+
+   /* Tamanho do Texto responsivo */
+   #page-home main p {
+       font-size: 2.5vh;
+       line-height: 1.1em;
+   }
+
+   /* Estipula a posição e o tamanho do segundo botão */
+   #page-home main a{
+       margin: 0.5em auto;
+       min-width: 260px;   
+   }
+
+   /* Mostra o segundo botão */
+   #page-home .inMain{
+       display: flex;
+       background-color: var(--title-color);
+       margin-bottom: 0;
+   }
+
+   /* Mostra o icone dentro do botão roxo */
+   #page-home .inMain span::after {
+       content: "";
+       background-image: url('../icons/log-in.svg');
+       width: 20px;
+       height: 20px;    
+   }
+
+    /* =================== Página Create-point =========================  */
+    /*Alinhando os elementos "Dados da entidade" 
+    e "itens de coleta" em coluna  */
+   .one-page {        
+       flex-direction: column;
+       justify-content: center;
+   }
+
+   /*Alinha ao centro a logo  */
+   #page-create header{       
+       justify-content: center;
+       margin-top: 35px;       
+   }
+
+   /* Remove o botão "voltar para home do cabeçalho" */
+   #page-create header .buttonHidden{
+       display: none;           
+   }
+
+   /* Mostra o segundo botão do form "voltar para home" */
+   #page-create form .inForm{
+        display: flex;        
+        background-color: var(--title-color);              
+        align-items:center;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    /* Estiliza e posiciona o segundo botão form "voltar para home" */
+    #page-create a {    
+        margin: 0.5em auto 0 auto;
+        max-width: 260px;
+        height: 56px;
+        color: aliceblue;
+        
+    }    
+
+   /* Personaliza o tamanho da área segundo botão form "voltar para home" */
+   #page-create form .inForm span {        
+       width: 52px;
+       height: 52px;
+       background-color: rgba(0, 0, 0, 0.08);
+       border-top-left-radius: 8px;
+       border-bottom-left-radius: 8px ;    
+       margin-right: 1.6em;
+       display: flex;
+       align-items: center;
+       justify-content: center;              
+   }
+
+   /* Mostra o icone dentro do segundo botão form "voltar para home"*/
+   #page-create form a span::before{
+       content: "";
+       background-image: url('../icons/arrow-left.svg');
+       width: 25px;
+       height: 20px;
+   }
+
+   /* Estiliza o formulário, posição cor tamanho */
+    #page-create form {
+       min-width: 280px;
+       text-align: center;    
+   }
+
+   /* Estipula um tamanho para o 
+    fieldset Dados da entidade e o 
+    personaliza */
+    #page-create fieldset.campo1{
+        margin-top: 64px;
+        width: auto;
+        border: 1px solid black;
+        text-align: left;
+    }
+
+    /* Estiliza o espaçamento do fieldset */
+    #page-create fieldset.campo2 {
+        margin-top: 64px;
+        width: auto;        
+        /* justify-content: center;
+        align-items: center; */
+        border: 1px solid black;
+    
+    }
+
+   /* Estiliza o texto "Cadastrar um ponto de coleta" */
+    #page-create form h1 {
+       font-size: 5vh;
+       text-align: center;
+   }   
+
+   /* Remove o espaçamento do lado esquedo
+   dos campos Endereço e Numero
+   Estado e Cidade */
+   .field-group .field + .field{
+       margin-left: 0;
+   }
+   .field-group  {
+      flex-direction: column;
+   }
+
+   /* Estilização do comportamento Grid dos itens de coleta */
+   .items-grid {
+       display: grid;
+       grid-template-columns: 1fr;
+       margin: 0 auto 0.9em auto;
+       width: 250px;
+       
+   }
+   /* Estilização da tag Li do grid */
+   .items-grid li {       
+       margin: 0 auto;
+   }
+
+   /* ====================== Página search-point ============================= */
+
+   /*Alinha ao centro a logo  */
+   #page-search header{       
+        justify-content: center;
+        margin-top: 35px;       
+    }
+
+    /* Remove o botão "voltar para home do cabeçalho" */
+    #page-search header .buttonHidden{
+        display: none;           
+    }
+
+   /* Estliza o espaçamento dos cards e centraliza   */
+   #page-search main {
+       margin: 1.5em 0.5em;    
+   }
+
+   /*Alinha ao centro o texto "pontos encontrados"  */
+   #page-search main h4{       
+        text-align: center;
+        margin-top: 35px; 
+    }
+   
+   /* Adiciona bordas no card */
+   #page-search main img {
+       /* height: 150px;         */
+       border-radius: 8px 8px 0 0;
+   }
+   
+    /* estiliza o comportamento em grid dos cards */
+   #page-search main .cards {        
+       grid-template-columns: 1fr;        
+   }
+
+   /* Adiciona uma borda em volta dos cards */
+   .card{        
+       border: 1px solid green;
+   }
+
+   /* Estilizando o botão duplicado "voltar para home" */
+   #page-search main .inSearch {
+       display: flex;
+       width: 50px;
+       height: 50px;
+       background: aliceblue;
+       font-size: 0.01px;
+       border-radius: 100%;
+       position: fixed;
+       top: 90vh;
+       right: 10vw;
+   }
+   /* Estiliza o botão e de voltar para home */
+   #page-search main .inSearch span {  
+        display: flex;
+        flex: 1;
+         
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.08);
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px ;
+        border-radius: 100%;
+
+        justify-content: center;
+        align-items: center;
+        
+    }
+    /* Mostra o icone do botão voltar para home */
+   #page-search main .inSearch span::after{
+        content: "";
+        background-image: url('../icons/arrow-left.svg');
+        width: 25px;
+        height: 25px;        
+   }
+
+   /* Modal responsivo */
+   #modal .header {
+        flex-direction: column;
+  }
+
+  /* Centraliza o modal */
+  #modal form {
+        text-align: center;
+  }
+
+  /* Posiciona o botão de fechar abaixo do input */
+  #modal .header a {
+        position: absolute;
+        bottom: 15vh;
+        width: 20px;
+        height: 20px;
+  }  
+  
+}
+
+@media (min-width:480px) { 
+   /* smartphones, Android phones, landscape iPhone */
+
+   /* =================== Página Create-point =========================  */
+   #page-create form a {
+       margin: 0.9em auto;
+   }
+
+   #page-create a {    
+       margin-top: 0.5em;
+       max-width: 260px;
+       height: 56px;
+       color: aliceblue;
+   }
+
+   form {
+       text-align: center;
+   }
+
+   /* Mostra o segundo botão */
+   #page-create .inForm{
+       display: flex;        
+       background-color: var(--title-color);              
+       align-items:center;
+       font-weight: 500;
+       text-align: center;
+           
+   }
+
+   /* Estilização do comportamento Grid dos itens de coleta */
+   .items-grid {        
+       grid-template-columns: 1fr 1fr;       
+   }
+  
+}
+
+@media (min-width:600px) {
+     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+     
+     /* =================== Página Create-point =========================  */
+     /* Estilização do comportamento Grid dos itens de coleta */
+    .items-grid {        
+        grid-template-columns: 1fr 1fr 1fr;       
+    }
+
+     /* =================== Página search-point =========================  */
+     /* Estilização do comportamento Grid dos cards */
+     #page-search main .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width:801px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+    /* =================== Página Create-point =========================  */
+    /* Faz com que os campos "imagem da entidade
+        Número/Complemento Cidade fiquei ao lado 
+        dos outros inputs */
+    .field-group {
+        flex-direction: row;
+    }
+
+/* Estiliza o espaçamento do lado esquedo
+    dos campos Endereço e Numero
+    Estado e Cidade */
+.field-group .field + .field{
+    margin-left: 24px;
+}
+}
+@media (min-width:1024px) {
+    /* big landscape tablets, laptops, and desktops */
+
+    /* =================== Página index =========================  */
+    /*Configurando a Div page-home*/
+    /*Background imagem*/
+    #page-home{
+        width: 90%;
+        max-width: 1025px;
+        height: 100vh;
+        background:url('../icons/home-background.svg') no-repeat;
+        background-position-y: 30vh;
+        background-position-x: 25vw;     
+    }
+
+    /*Cabeçalho do site*/
+    #page-home header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 48px;
+    }
+
+    /* Botão Crie seu ponto de coleta */
+    #page-home header a{
+        display: flex;
+        color: var(--title-color);  
+        height: 56px;
+        align-items: center;   
+    }
+
+    /* Repondo o botão do header */
+   #page-home header .buttonHidden{
+        display: flex;           
+    }
+
+    #page-home header a span{
+        background-image: url('../icons/log-in.svg');
+        height: 20px;
+        width: 20px;
+        display: flex;        
+    }
+
+    #page-home header a strong{
+        flex: 1;
+        text-align: center;        
+    }
+
+    /*Configurando a classe main da Div page-home, Contenei 
+    ao lado da imagem de fundo*/
+    #page-home main{
+        max-width: 500px;
+        max-height: 700px;
+        margin: 0;
+        text-align: left;
+        
+    }
+
+    #page-home h1{
+        font-size: 60px;    
+    }
+
+    #page-home main p{
+        font-size: 24px;
+        line-height: 38px;
+        margin-top: 24px;
+    }
+
+    #page-home .inMain {
+        display: none;
+    }
+
+    #page-home main a{
+        width: 95%;
+        max-width: 360px;
+        margin: 0;
+    }
+
+    #page-home main a:hover{
+        background-color: #2fb86e;
+    }
+
+    /*Configurando o Span icon loopa botão*/
+    #page-home main a span{
+        width: 72px;
+        height: 72px;
+        
+        background-color: rgba(0, 0, 0, 0.08);
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px ;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+    }
+
+    #page-home main a span::after {
+        content: "";
+        background-image: url('../icons/search.svg');
+        width: 20px;
+        height: 20px;    
+    }
+
+    #page-home main a strong{
+        flex: 1;
+        text-align: center;
+        color: white;
+    }
+
+    /* =================== Página Create-point =========================  */
+       
+    /*Cabeçalho do site*/
+    #page-create header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 48px;
+    }
+
+    /* Personalizando cores e texto 
+    do botão "Voltar para home" */
+    #page-create header .buttonHidden{
+        display: flex;
+        color: var(--title-color);
+        font-weight: bold;
+        align-items: center;
+        margin: 0;       
+    }
+
+    /* retira o botão duplicado "voltar para home" */
+    #page-create form .inForm {
+        display: none;
+    }
+
+    /* Estiliza o espaçamento do lado esquedo
+    dos campos Endereço e Numero
+    Estado e Cidade */
+    #page-create .field-group .field + .field{
+        margin-left: 24px;
+    }
+
+    /* Estiliza a direção dos inputs, preenche o espaço todo */
+    #page-create .field {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-bottom: 24px;
+    }
+
+    #page-create .field-group {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* =================== Página search-point =========================  */
+    
+    /*Cabeçalho do site*/
+    #page-search header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 48px;
+    }
+
+    /* Personalizando cores e texto 
+    do botão "Voltar para home" */
+    #page-search header .buttonHidden {
+        display: flex;
+        color: var(--title-color);
+        font-weight: bold;
+        align-items: center;
+        height: 56px;
+               
+    }
+
+    /*Alinha ao centro o texto "pontos encontrados"  */
+   #page-search main h4 {       
+        text-align: left;
+    }
+
+    /* Estilização do comportamento Grid dos cards */
+    #page-search main .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* Revomendo o botão duplicado "voltar para home" */
+   #page-search main .inSearch {
+        display: none
+    }
+
+    #modal .content {
+        
+        width: 500px;       
+      }
+}
+@media (min-width:1280px) { 
+    /* hi-res laptops and desktops */
+
+     /* =================== Página index =========================  */
+    /*Configurando a Div page-home*/
+    /*Background imagem*/
+    #page-home{        
+        max-width: 1150px;     
+        background-position-x: 30vw;     
+    }
+
+    /* =================== Página Create-point ========================= 
+                   Alinhando os elementos em linhas
+   */    
+   .one-page {        
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+   /* Estiliza o formulário, 
+    posição, cor e tamanho */
+    #page-create{
+        height: 100vh;        
+    }
+
+    #page-create form{
+        height: auto;        
+    }
+
+    /* Estilização do comportamento Grid dos itens de coleta */
+    .items-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 500px;
+    }
+
+    /* =================== Página Create-point ========================= 
+       Estilização do comportamento Grid dos cards */
+    #page-search main .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
+
+@media (min-width:1500px) { 
+    /* hi-res laptops and desktops */
+
+     /* =================== Página index =========================  */
+    /*Configurando a Div page-home*/
+    /*Background imagem*/
+    #page-home{        
+        max-width: 1480px;     
+        background-position-x: 30vw;     
+    }
+
+    
+
+}

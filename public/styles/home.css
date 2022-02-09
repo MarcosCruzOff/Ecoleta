@@ -1,0 +1,105 @@
+/*Configurando a Div page-home*/
+/*Background imagem*/
+#page-home{
+    width: 90%;
+    max-width: 1480px;
+    height: 100vh;
+    background:url('../icons/home-background.svg') no-repeat;
+    background-position: 35vw bottom;    
+    margin: 0 auto;    
+    display: flex;
+    flex-direction:column;
+    border: 1px solid transparent;  
+}
+/*Cabeçalho do site*/
+#page-home header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#page-home header a{
+    display: flex;
+    color: var(--title-color);
+       
+}
+
+#page-home header a span{
+    background-image: url('../icons/log-in.svg');
+    height: 20px;
+    width: 20px;
+    display: flex;
+    
+}
+#page-home header a strong{
+    flex: 1;
+    text-align: center;
+    
+}
+/*Configurando a classe main da Div page-home, Contenei 
+ao lado da imagem de fundo*/
+#page-home main{
+    max-width: 800px;
+    max-height: 800px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+#page-home h1{
+    font-size: 60px;    
+}
+
+#page-home main p{
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+
+#page-home .inMain {
+    display: none;
+}
+
+#page-home main a{
+    width: 95%;
+    max-width: 360px; 
+    height: 72px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    background: var(--primary-color);
+    transition: 400ms;    
+}
+
+#page-home main a:hover{
+    background-color: #2fb86e;
+}
+
+/*Configurando o Span icon loopa botão*/
+#page-home main a span{
+    width: 72px;
+    height: 72px;
+    
+    background-color: rgba(0, 0, 0, 0.08);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+#page-home main a span::after {
+    content: "";
+    background-image: url('../icons/search.svg');
+    width: 20px;
+    height: 20px;    
+}
+
+#page-home main a strong{
+    flex: 1;
+    text-align: center;
+    color: white;
+}
